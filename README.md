@@ -9,24 +9,24 @@ Provision a local **NGINX Docker container** using **Terraform** as part of my D
 
 Before starting, I installed:
 
-- ✅ [Terraform](https://developer.hashicorp.com/terraform/downloads) using Chocolatey:
+  ✅ [Terraform](https://developer.hashicorp.com/terraform/downloads) using Chocolatey:
   ```bash
   choco install terraform
-✅ Docker Desktop and made sure it's running
+- ✅ Docker Desktop and made sure it's running
 
-✅ Git Bash terminal (for running Terraform and Docker CLI)
+- ✅ Git Bash terminal (for running Terraform and Docker CLI)
 
 ## 📁 Project Setup
-Created a new folder on my Desktop:
-copy
-mkdir ~/Desktop/terraform-docker
-cd ~/Desktop/terraform-docker
+- Created a new folder on my Desktop:
+- Copy
+- mkdir ~/Desktop/terraform-docker
+- cd ~/Desktop/terraform-docker
 ## Created a Terraform configuration file named main.tf:
 - copy
-  nano main.tf
+- nano main.tf
 - Pasted the following code in main.tf:
 - Copy
-  terraform {
+terraform {
   required_providers {
     docker = {
       source  = "kreuzwerker/docker"
@@ -54,13 +54,13 @@ resource "docker_container" "nginx_container" {
 ## 🚀 Commands I Executed
 - Initialize Terraform:
 - Copy
-terraform init
+- terraform init
 ## Preview what Terraform will do:
 - Copy
-terraform plan
+- terraform plan
 ## Apply the configuration (when prompted, typed yes):
 - Copy
-terraform apply
+- terraform apply
 
 ## ✅ Output
 - Terraform pulled the nginx:latest Docker image.
@@ -74,7 +74,7 @@ terraform apply
 ## 🧹 Cleanup
 - To destroy the container and remove the image:
 - Copy
-terraform destroy
+- terraform destroy
 
 ## 📌 Notes
 - I faced an error with docker_image.nginx.latest and fixed it by using docker_image.nginx.name.
