@@ -22,11 +22,11 @@ copy
 mkdir ~/Desktop/terraform-docker
 cd ~/Desktop/terraform-docker
 ## Created a Terraform configuration file named main.tf:
-copy
-nano main.tf
-Pasted the following code in main.tf:
-Copy
-terraform {
+- copy
+  nano main.tf
+- Pasted the following code in main.tf:
+- Copy
+  terraform {
   required_providers {
     docker = {
       source  = "kreuzwerker/docker"
@@ -52,33 +52,33 @@ resource "docker_container" "nginx_container" {
   }
 }
 ## 🚀 Commands I Executed
-Initialize Terraform:
-Copy
+- Initialize Terraform:
+- Copy
 terraform init
 ## Preview what Terraform will do:
-copy
+- Copy
 terraform plan
 ## Apply the configuration (when prompted, typed yes):
-Copy
+- Copy
 terraform apply
 
 ## ✅ Output
-Terraform pulled the nginx:latest Docker image
+- Terraform pulled the nginx:latest Docker image.
 
-Created a container named nginx_terraform
+- Created a container named nginx_terraform.
 
-Exposed it on http://localhost:8080
+- Exposed it on http://localhost:8080.
 
 ## 📸 When I opened the browser and visited http://localhost:8080, I saw the NGINX welcome page.
 
 ## 🧹 Cleanup
-To destroy the container and remove the image:
-Copy
+- To destroy the container and remove the image:
+- Copy
 terraform destroy
 
 ## 📌 Notes
-I faced an error with docker_image.nginx.latest and fixed it by using docker_image.nginx.name.
+- I faced an error with docker_image.nginx.latest and fixed it by using docker_image.nginx.name.
 
-Used Git Bash to avoid path issues on Windows.
+- Used Git Bash to avoid path issues on Windows.
 
-Learned how Terraform interacts with Docker as a provider.
+- Learned how Terraform interacts with Docker as a provider.
