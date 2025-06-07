@@ -9,7 +9,7 @@ Provision a local **NGINX Docker container** using **Terraform** as part of my D
 
 Before starting, I installed:
 
-  ✅ [Terraform](https://developer.hashicorp.com/terraform/downloads) using Chocolatey:
+- ✅ [Terraform](https://developer.hashicorp.com/terraform/downloads) using Chocolatey:
   ```bash
   choco install terraform
 - ✅ Docker Desktop and made sure it's running
