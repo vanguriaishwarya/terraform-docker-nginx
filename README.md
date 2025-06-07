@@ -24,10 +24,10 @@ Before starting, I installed:
 ## Created a Terraform configuration file named main.tf:
 - copy
 - nano main.tf
-- take the code from main.tf file .
+- take the code from main.tf file and paste the code and click ctrl+o then enter then click ctrl+x to exit.
 
 ## 🚀 Commands I Executed
-- Initialize Terraform:
+## Initialize Terraform:
 - Copy
 - terraform init
 ## Preview what Terraform will do:
