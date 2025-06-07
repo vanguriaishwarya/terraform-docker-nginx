@@ -26,31 +26,31 @@ Before starting, I installed:
 - nano main.tf
 - Pasted the following code in main.tf:
 - Copy
-terraform {
-  required_providers {
-    docker = {
-      source  = "kreuzwerker/docker"
-      version = "~> 3.0.2"
-    }
-  }
-}
+  -terraform {
+  -required_providers {
+    -docker = {
+      -source  = "kreuzwerker/docker"
+      -version = "~> 3.0.2"
+    -}
+  -}
+-}
 
-provider "docker" {}
+-provider "docker" {}
 
-resource "docker_image" "nginx" {
-  name         = "nginx:latest"
-  keep_locally = false
-}
+-resource "docker_image" "nginx" {
+  -name         = "nginx:latest"
+  -keep_locally = false
+-}
 
-resource "docker_container" "nginx_container" {
-  name  = "nginx_terraform"
-  image = docker_image.nginx.name
+-resource "docker_container" "nginx_container" {
+  -name  = "nginx_terraform"
+  -image = docker_image.nginx.name
 
-  ports {
-    internal = 80
-    external = 8080
-  }
-}
+  -ports {
+    -internal = 80
+    -external = 8080
+  -}
+-}
 ## 🚀 Commands I Executed
 - Initialize Terraform:
 - Copy
