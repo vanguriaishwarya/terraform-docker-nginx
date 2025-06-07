@@ -24,33 +24,8 @@ Before starting, I installed:
 ## Created a Terraform configuration file named main.tf:
 - copy
 - nano main.tf
-- Pasted the following code in main.tf:
-- Copy
-  -terraform {
-  -required_providers {
-    -docker = {
-      -source  = "kreuzwerker/docker"
-      -version = "~> 3.0.2"
-    -}
-  -}
--}
+- take the code from main.tf file .
 
--provider "docker" {}
-
--resource "docker_image" "nginx" {
-  -name         = "nginx:latest"
-  -keep_locally = false
--}
-
--resource "docker_container" "nginx_container" {
-  -name  = "nginx_terraform"
-  -image = docker_image.nginx.name
-
-  -ports {
-    -internal = 80
-    -external = 8080
-  -}
--}
 ## 🚀 Commands I Executed
 - Initialize Terraform:
 - Copy
